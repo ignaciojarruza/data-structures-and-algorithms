@@ -1,3 +1,6 @@
+from typing import List
+import unittest
+
 """
 Leetcode 26: Remove Duplicates from Sorted Array
 
@@ -33,3 +36,23 @@ class Solution:
                 nums[j] = nums[i]
                 j += 1
         return j
+
+
+"""
+Test Cases
+"""
+
+
+class Test(unittest.TestCase):
+    def test_solution(self):
+        solution = Solution()
+        self.assertEqual(solution.removeDuplicates([1, 1, 2]), 2, "Correct Answer: 6")
+        self.assertEqual(
+            solution.removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]),
+            5,
+            "Correct Answer is 5",
+        )
+
+
+if __name__ == "__main__":
+    unittest.main()
