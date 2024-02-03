@@ -25,6 +25,15 @@ Dynamic Arrays
 
 
 def containsDuplicate(self, nums: List[int]) -> bool:
+    """
+    Determines whether a sequence of numbers contains a duplicate.
+
+    Parameters:
+    - nums (List[int])  : Sequence of numbers to verify.
+
+    Returns:
+    - bool: True if sequence contains duplicates, false otherwise.
+    """
     seen = set()
     for num in nums:
         if num in seen:

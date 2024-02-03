@@ -9,20 +9,18 @@ Specifically, ans is the concatenation of two nums arrays.
 Return the array ans.
 """
 
-"""
-Concatenates the given list 'nums' with itself without using the '+' operator
-to add arrays together.
-
-Parameters:
-    nums (List[int]):   The input list to be concatenated
-
-Returns:
-    List[int]:  The concatenated list.
-"""
-
 
 class Solution:
     def concatenateArray(self, nums: List[int]):
+        """
+        Concatenates the given list 'nums' with itself without using the '+' operator
+        to add arrays together.
+
+        Parameters:
+            nums (List[int]):   The input list to be concatenated
+
+        Returns:
+            List[int]:  The concatenated list."""
         # one liner: return ans+ans
         # without using + operator
         answer = []
