@@ -21,6 +21,15 @@ Return:
 
 class Solution:
     def validParentheses(self, s: str) -> bool:
+        """
+        Determines if there is a valid arrangement of parentheses.
+
+        Parameters:
+        - s (str)   : sequence of parentheses.
+
+        Returns:
+        - bool: True if it a valid arrangement of parentheses, false otherwise.
+        """
         stack = []
         pairs = {"{": "}", "(": ")", "[": "]"}
         for char in s:
@@ -32,6 +41,8 @@ class Solution:
 
 
 class Test(unittest.TestCase):
+    """Test Cases"""
+
     def test_solution(self):
         solution = Solution()
         self.assertEqual(solution.validParentheses("()"), True)

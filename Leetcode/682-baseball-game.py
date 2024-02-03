@@ -17,24 +17,22 @@ Invalidate the previous score, removing it from the record.
 Return the sum of all the scores on the record after applying all the operations.
 """
 
-"""
-Calculates the total score based on a list of operations on a given input list.
-
-Parameters:
-    operations (List[str]): A list of strings representing operations on a socre.
-    Valid operations include:
-        '+'     : Adds the last two scores and appends the result.
-        'D'     : Doubles the last score and appends the result.
-        'C'     : Removes the last score from the list.
-        Integer : Appends the integer to the lsit as a score.
-
-Returns:
-    int:    The total score obtained after performing all the operations.
-"""
-
 
 class Solution:
     def calculatePoints(self, operations: List[str]) -> int:
+        """
+        Calculates the total score based on a list of operations on a given input list.
+
+        Parameters:
+            operations (List[str]): A list of strings representing operations on a socre.
+            Valid operations include:
+                '+'     : Adds the last two scores and appends the result.
+                'D'     : Doubles the last score and appends the result.
+                'C'     : Removes the last score from the list.
+                Integer : Appends the integer to the lsit as a score.
+
+        Returns:
+            int:    The total score obtained after performing all the operations."""
         solution = []
         for item in operations:
             if item == "+":
