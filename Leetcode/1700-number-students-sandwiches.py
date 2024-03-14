@@ -25,16 +25,20 @@ class Solution:
         
         Returns:
             int:    Number of students that are unable to eat.
+
+        Time Complexity: O(n)
         """
+        count = 0
         while (len(students) != 0):
-            if (sandwiches[0] not in students):
-                return len(students)
             if (students[0] == sandwiches[0]):
                 students.pop(0)
                 sandwiches.pop(0)
+                count = 0
             else:
-                student = students.pop(0)
-                students.append(student)
+                students.append(students.pop(0))
+                count += 1
+            if (count == len(students)):
+                break
         return len(students)
     
 class Test(unittest.TestCase):
